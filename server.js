@@ -33,7 +33,6 @@ fs.readFile(__dirname + '/data.kml', function (err, data) {
                         polygonCoordinates: res['Polygon'] ? res['Polygon'][0]['outerBoundaryIs'][0]['LinearRing'][0]['coordinates'][0].split('\n') : []
                     };
                 });
-                console.log(" myData :", myData);
             }
         });
     }

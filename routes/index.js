@@ -13,8 +13,8 @@ router.post('/search', async (req, res) => {
 
             const response = await axios.get(`${GEOCODE_API}?q=${placeName}&key=${apiKey}`);``
             
-            const lat = response.data.results[0].geometry.lat;
-            const lng = response.data.results[0].geometry.lng;
+            const lat = response.data.results[0].geometry.lng;
+            const lng = response.data.results[0].geometry.lat;
 
             let outletName = '';
 
@@ -53,7 +53,7 @@ router.post('/search', async (req, res) => {
 
            res.json({ status: true, message: "Success", found: result, outletName: outletName });
         } else {
-            res.json({ status: false, message: 'Place name is empty.' });
+           res.json({ status: false, message: 'Place name is empty.' });
         }
     } catch (e) {
         res.json({ status: false, message: 'Something went wrong.Please try after sometime.' });

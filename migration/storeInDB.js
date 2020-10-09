@@ -6,7 +6,7 @@ const parser = new xml2js.Parser();
 
 fs.readFile(__dirname + '/data.kml', function (err, data) {
     if (err) {
-        console.log("Stroing data in database failed.Try again.");
+        console.log("Storing data in database failed.Try again.");
     } else {
         parser.parseString(data, function (err, result) {
             if (err) {
@@ -20,7 +20,6 @@ fs.readFile(__dirname + '/data.kml', function (err, data) {
                         polygonCoordinates: res['Polygon'] ? res['Polygon'][0]['outerBoundaryIs'][0]['LinearRing'][0]['coordinates'][0].split('\n') : []
                     });
                 });
-                // console.log(" myData :", myData);
             }
         });
     }

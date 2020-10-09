@@ -1,12 +1,12 @@
-## Clone the repository 
+### Clone the repository 
 
 [sudo] git clone "https://github.com/dinudines/Location-Identifier-backend.git"
 
-# Install the dependencies
+### Install the dependencies
 
 [sudo] npm install
 
-# Run the application
+### Run the application
 
 [sudo] npm start
 
